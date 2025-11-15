@@ -31,7 +31,7 @@ const _spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Tejas Shinde - Fullstack Developer Portfolio",
   description:
-    "Cinematic portfolio of Tejas Shinde, a Java Full Stack Developer skilled in React, Spring Boot, Angular, Hibernate, and MySQL.",
+    "Portfolio of Tejas Shinde, a Java Full Stack Developer skilled in React, Spring Boot, Angular, Hibernate, and MySQL.",
   icons: {
     icon: [
       { url: "/favicon.png", type: "image/png", sizes: "512x512" },

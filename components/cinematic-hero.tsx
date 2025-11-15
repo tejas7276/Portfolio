@@ -70,7 +70,7 @@ export default function CinematicHero() {
               opacity: 0,
             }}
           >
-            Full Stack Developer • Building clean, scalable & human-centered web experiences
+            Full Stack Developer • I build fast, scalable, and human-focused web products
           </p>
         </div>
 

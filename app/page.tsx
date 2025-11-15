@@ -1,7 +1,4 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import CinematicHero from "@/components/cinematic-hero"
+import Hero from "@/components/cinematic-hero"
 import Navigation from "@/components/navigation"
 import Experience from "@/components/experience"
 import Skills from "@/components/skills"
@@ -11,30 +8,26 @@ import Footer from "@/components/footer"
 import ScrollProgress from "@/components/scroll-progress"
 import Oreo from "@/components/oreo-chatbot"
 
-export default function Home() {
-  const [isReady, setIsReady] = useState(false)
+export const metadata = {
+  title: "Tejas Shinde – Full Stack Developer",
+  description:
+    "Portfolio of Tejas Shinde, Full Stack Developer. Explore projects, skills, experience, and contact info.",
+}
 
-  useEffect(() => {
-    setIsReady(true)
-  }, [])
-
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-background">
-      {isReady && (
-        <>
-          <CinematicHero />
-          <section id="experience">
-            <Navigation />
-            <Experience />
-            <Skills />
-            <Projects />
-            <Contact />
-            <Footer />
-          </section>
-          <ScrollProgress />
-          <Oreo />
-        </>
-      )}
+      <Hero />
+      <section id="experience">
+        <Navigation />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </section>
+      <ScrollProgress />
+      <Oreo />
     </main>
   )
 }

@@ -35,7 +35,7 @@ export default function Projects() {
       title: "SAMSTRACK",
       subtitle: "Student Attendance Management System",
       description:
-        "A comprehensive attendance tracking system built with modern full-stack technologies. Features secure CRUD APIs, responsive UI, and optimized database queries for faster data retrieval.",
+        "A full-featured system for managing student attendance. Built with Angular and Spring Boot, featuring role-based access, QR scanning, and performance-optimized APIs.",
       stack: ["Spring Boot", "Angular", "MySQL", "REST API", "Hibernate"],
       features: [
         "Secure CRUD Operations",
@@ -45,13 +45,14 @@ export default function Projects() {
         "Responsive Design",
       ],
       github: "https://github.com/tejas7276/SAMSTRACK",
+      live: "https://samstrack.vercel.app",
       image: "/student-attendance-management-system-dashboard.png",
     },
     {
       title: "Drift Kicks",
       subtitle: "Online Shoe E-commerce Platform",
       description:
-        "A fully functional online shoe store with modern UI/UX. Implements shopping cart functionality, checkout, role-based access control, and responsive design.",
+        "An elegant e-commerce platform for sneakers. Includes full shopping flow, filters, and admin access — designed with Bootstrap and Django.",
       stack: ["Django", "HTML5", "CSS3", "JavaScript", "Bootstrap"],
       features: [
         "Shopping Cart System",
@@ -61,6 +62,7 @@ export default function Projects() {
         "Mobile Responsive",
       ],
       github: "https://github.com/tejas7276/Drift-Kicks",
+      live: "https://driftkicks.vercel.app",
       image: "/online-shoe-store-ecommerce-platform.png",
     },
   ]
@@ -89,15 +91,12 @@ export default function Projects() {
               {/* Image Section */}
               <div className={`${idx % 2 === 1 ? "md:order-2" : ""}`}>
                 <div className="relative overflow-hidden rounded-lg glass-effect-strong hover:glass-effect transition-all duration-500">
-
-                  {/* PERFECT FITTED IMAGE */}
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} – project screenshot`}
+                    loading="lazy"
                     className="w-full aspect-video object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
                   />
-
-                  {/* NEW FIXED OVERLAY (no dimming) */}
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
                 </div>
               </div>
@@ -155,13 +154,13 @@ export default function Projects() {
                       View Source
                     </Button>
                   </a>
-
-                  <Button className="gap-2 bg-accent hover:bg-accent/90 hover:scale-105 transition-transform duration-300">
-                    <ExternalLink className="w-4 h-4" />
-                    View Project
-                  </Button>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer">
+                    <Button className="gap-2 bg-accent hover:bg-accent/90 hover:scale-105 transition-transform duration-300">
+                      <ExternalLink className="w-4 h-4" />
+                      View Project
+                    </Button>
+                  </a>
                 </div>
-
               </div>
             </div>
           ))}
